@@ -1,0 +1,24 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.technovision-dev/odoo-claude-connector",
+  "title": "Claude Connector for Odoo",
+  "description": "Permission-aware MCP server for Odoo 18/19. OAuth 2.1; each call runs as one named Odoo user.",
+  "version": "1.4.3",
+  "websiteUrl": "https://technovision.dev/products/mcp-server",
+  "repository": {
+    "url": "https://github.com/technovision-dev/odoo-claude-connector",
+    "source": "github"
+  },
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://{odoo_host}/mcp/v1",
+      "variables": {
+        "odoo_host": {
+          "description": "Your Odoo domain with the Claude Connector module installed (e.g. erp.example.com)",
+          "isRequired": true
+        }
+      }
+    }
+  ]
+}
